@@ -222,7 +222,7 @@ class BootstrapPageCacheTestCase extends DrupalWebTestCase {
     $this->drupalGet('');
     $this->assertEqual($this->drupalGetHeader('X-Drupal-Cache'), 'HIT', 'Page was cached.');
     $this->assertFalse($this->drupalGetHeader('Content-Encoding'), 'A Content-Encoding header was not sent.');
-    $this->assertTitle(t('You randy wanker! Welcome to @site-name | @site-name', array('@site-name' => variable_get('site_name', 'Drupal'))), 'Site title matches.');
+    $this->assertTitle(t('You esteemed colleague! Welcome to @site-name | @site-name', array('@site-name' => variable_get('site_name', 'Drupal'))), 'Site title matches.');
     $this->assertRaw('</html>', 'Page was not compressed.');
 
     // Disable compression mode.
